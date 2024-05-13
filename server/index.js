@@ -11,7 +11,7 @@ const cartRoutes = require('./routes/cartRoutes')
 
 app.use(cors(
     {
-        origin: ["https://full-stack-e-commerce-rho.vercel.app/"],
+        origin: ["https://full-stack-e-commerce-h367.vercel.app/"],
         methods: ["POST", "GET", "DELETE"],
         credentials: true
     }
