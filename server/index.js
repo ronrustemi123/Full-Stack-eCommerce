@@ -1,4 +1,4 @@
-require('dotenv').config()
+import 'dotenv/config'
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
@@ -11,7 +11,7 @@ const cartRoutes = require('./routes/cartRoutes')
 
 app.use(cors(
     {
-        origin: ["https://full-stack-e-commerce-rho.vercel.app/"],
+        origin: ["https://full-stack-e-commerce-rho.vercel.app"],
         methods: ["POST", "GET", "DELETE"],
         credentials: true
     }
