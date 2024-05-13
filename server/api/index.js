@@ -5,9 +5,9 @@ require('dotenv').config();
 
 const app = express()
 
-const router = require('./routes/storeRoutes')
-const userRoutes = require('./routes/userRoutes')
-const cartRoutes = require('./routes/cartRoutes')
+const router = require('../routes/storeRoutes')
+const userRoutes = require('../routes/userRoutes')
+const cartRoutes = require('../routes/cartRoutes')
 
 app.use(cors(
     {
