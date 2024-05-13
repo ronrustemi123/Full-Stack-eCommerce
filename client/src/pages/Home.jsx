@@ -13,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('https://full-stack-e-commerce-rho.vercel.app/', {
+            const response = await fetch('https://full-stack-e-commerce-gamma.vercel.app/', {
                 mode: 'no-cors'
             })
             const data = await response.json()

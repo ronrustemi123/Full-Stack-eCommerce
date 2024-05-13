@@ -30,7 +30,7 @@ const Navbar = () => {
 
     useEffect(() => {
       const fetchItems = async () => {
-        const response = await fetch('https://full-stack-e-commerce-rho.vercel.app/api/cart', {
+        const response = await fetch('https://full-stack-e-commerce-gamma.vercel.app/', {
           headers: {'Authorization': `Bearer ${user.token}`}
         })
         const data = await response.json()
