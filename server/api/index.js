@@ -9,13 +9,7 @@ const router = require('../routes/storeRoutes')
 const userRoutes = require('../routes/userRoutes')
 const cartRoutes = require('../routes/cartRoutes')
 
-app.use(cors(
-    {
-        origin: ["https://full-stack-e-commerce-h367.vercel.app"],
-        methods: ["POST", "GET", "DELETE"],
-        credentials: true
-    }
-))
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
