@@ -34,7 +34,7 @@ const Categories = () => {
             </div>
             <div className="categories">
                 <Stack flexWrap={'wrap'} rowGap={1.5} justifyContent={'center'} mt={8} spacing={1.8} direction={'row'}>
-                    {categoryName.map((el, i) => <Link to={`/categories/${el}`} key={i}>{el}</Link>)}
+                    {categoryName.map((el, i) => <Link style={{border: category === el ? '2px solid black' : null}} to={`/categories/${el}`} key={i}>{el}</Link>)}
                 </Stack>
             </div>
             <Grid2 mt={8} justifyContent='flex-start' spacing={3} wrap='wrap' container columns={{lg: 4, xs: 1, sm: 2}} >

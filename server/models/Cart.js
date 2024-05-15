@@ -9,8 +9,7 @@ const cartSchema = new Schema({
     },
     title: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     price: {
         type: Number,
@@ -25,5 +24,7 @@ const cartSchema = new Schema({
         required: true
     }
 }, {timestamps: true})
+
+cartSchema.path('title').unique(false);
 
 module.exports = mongoose.model('Cart', cartSchema)

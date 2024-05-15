@@ -30,7 +30,7 @@ const Navbar = () => {
 
     useEffect(() => {
       const fetchItems = async () => {
-        const response = await fetch('https://full-stack-e-commerce-gamma.vercel.app/', {
+        const response = await fetch('http://localhost:8000/api/cart', {
           headers: {'Authorization': `Bearer ${user.token}`}
         })
         const data = await response.json()
@@ -69,7 +69,7 @@ const Navbar = () => {
                   <Link onClick={handleLogout} to={'/'} className="login-nav-btn">
                     LOG OUT
                   </Link>
-                  <Badge badgeContent={items?.length} variant='number'  color='error' max={9} overlap='rectangular'>
+                  <Badge badgeContent={items?.length} variant='dot'  color='error' max={9} overlap='rectangular'>
                     <i onClick={toggleOpen} className="fa-solid fa-cart-shopping cart-link"></i>
                   </Badge>  
                 </>
@@ -108,14 +108,14 @@ const Navbar = () => {
             spacing={2.5}
           >
             {items?.length !== 0 ? (
-              items?.map((el) => (
+              items?.map((el, i) => (
                 <CartItem
-                  key={el.title}
-                  title={el.title}
-                  img={el.img}
-                  quantity={el.quantity}
-                  price={el.price}
-                  _id={el._id}
+                  key={i}
+                  title={el?.title}
+                  img={el?.img}
+                  quantity={el?.quantity}
+                  price={el?.price}
+                  _id={el?._id}
                 />
               ))
             ) : (

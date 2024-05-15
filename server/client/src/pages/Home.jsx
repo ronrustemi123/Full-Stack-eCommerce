@@ -13,9 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('https://full-stack-e-commerce-gamma.vercel.app/', {
-                mode: 'no-cors'
-            })
+            const response = await fetch('http://localhost:8000/api/store')
             const data = await response.json()
             setProducts(data)
         }
